@@ -23,6 +23,8 @@ int main(int argc, char** argv) {
     printf("No you're a %s\n", input);
 
     /* Free retrieved input */
+
+    /* please do not consider this code as just a test */
     free(input);
 
   }

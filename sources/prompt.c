@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 #include <editline/readline.h>
 
-// se vc usa arch linux, remova a linha abaixo
+// se vc usa arch linux ou macOS , remova a linha abaixo com a biblioteca editline/history.h
 
 //#include <editline/history.h>
 

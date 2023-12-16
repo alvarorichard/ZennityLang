@@ -18,7 +18,8 @@ typedef struct mpc_err_t mpc_err_t;
 
 /* Funções para os parsers */
 mpc_parser_t* mpc_new(const char* name);
-int mpca_lang(int flags, const char* language, ...);
+//int mpca_lang(int flags, const char* language, ...);
+mpc_err_t* mpca_lang(int flags, const char* language, ...);
 int mpc_parse(const char* filename, const char* input, mpc_parser_t* p, mpc_result_t* r);
 void mpc_cleanup(int num, ...);
 
@@ -35,7 +36,7 @@ typedef struct {
 } mpc_result_t;
 
 /* Função para imprimir o AST */
-void mpc_ast_print(void* v);
+void mpc_ast_print(mpc_ast_t* a);
 //void mpc_ast_delete(void* v);
 void mpc_ast_delete(mpc_ast_t* a);
 

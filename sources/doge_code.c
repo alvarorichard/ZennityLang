@@ -1,5 +1,5 @@
-#include "mpc.h" 
-#include "doge_code.h"
+#include "../include/mpc.h"
+#include "../include/doge_code.h"
 
 int doge(){
 

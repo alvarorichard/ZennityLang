@@ -1,11 +1,12 @@
 #ifndef PARSING_H
 #define PARSING_H
-#include "../include/mpc.h"
-
 
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+#include "../include/mpc.h"
+
 
 /* Funções para readline e add_history */
 char* readline(char* prompt);
@@ -35,7 +36,9 @@ typedef struct {
 
 /* Função para imprimir o AST */
 void mpc_ast_print(void* v);
-void mpc_ast_delete(void* v);
+//void mpc_ast_delete(void* v);
+void mpc_ast_delete(mpc_ast_t* a);
+
 
 /* Função principal do parser */
 int parser();

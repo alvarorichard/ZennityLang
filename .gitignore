@@ -1,0 +1,4 @@
+# Arquivos binários gerados pelo GCC e Clang
+*.out
+*.exe
+*.o

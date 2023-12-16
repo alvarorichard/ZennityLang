@@ -41,12 +41,12 @@ int parser() {
     ",
     Number, Operator, Expr, Lispy);
   
-  puts("Lispy Version 0.0.0.0.2");
-  puts("Press Ctrl+c to Exit\n");
+  puts("ZennityLang Version 0.0.0.0.2");
+  puts("Pressione Ctrl+c para Sair\n");
   
   while (1) {
   
-    char* input = readline("lispy> ");
+    char* input = readline("ZennityLang> ");
     add_history(input);
     
     /* Attempt to parse the user input */

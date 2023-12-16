@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
 
   while (1) {
 
-    char* input = readline("ZennityLang> ");
+    char* input = readline("ZennityLang $ ");
 
     add_history(input);
 

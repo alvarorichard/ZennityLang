@@ -865,7 +865,7 @@ lval* lval_read(mpc_ast_t* t) {
 
 /* Main */
 
-int main(int argc, char** argv) {
+int strings(int argc, char** argv) {
   
   Number  = mpc_new("number");
   Symbol  = mpc_new("symbol");
@@ -896,12 +896,12 @@ int main(int argc, char** argv) {
   /* Interactive Prompt */
   if (argc == 1) {
   
-    puts("Lispy Version 0.0.0.1.0");
-    puts("Press Ctrl+c to Exit\n");
+    puts("ZennityLang Version 0.0.0.1.0");
+    puts("Pressione Ctrl+c para  Sair\n");
   
     while (1) {
     
-      char* input = readline("lispy> ");
+      char* input = readline("ZennityLang $  ");
       add_history(input);
       
       mpc_result_t r;

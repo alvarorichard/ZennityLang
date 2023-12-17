@@ -777,7 +777,7 @@ lval* lval_read(mpc_ast_t* t) {
 
 /* Main */
 
-int main(int argc, char** argv) {
+int conditionals() {
   
   mpc_parser_t* Number = mpc_new("number");
   mpc_parser_t* Symbol = mpc_new("symbol");

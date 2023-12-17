@@ -797,8 +797,8 @@ int conditionals() {
     ",
     Number, Symbol, Sexpr, Qexpr, Expr, Lispy);
   
-  puts("Lispy Version 0.0.0.0.9");
-  puts("Press Ctrl+c to Exit\n");
+  puts("ZennityLang Version 0.0.0.0.9");
+  puts("Pressione Ctrl+c para Sair\n");
   
   lenv* e = lenv_new();
   lenv_add_builtins(e);

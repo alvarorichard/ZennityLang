@@ -1,6 +1,7 @@
 
 
 #include "../include/mpc.h"
+#include "../include/conditionals.h"
 
 
 #ifdef _WIN32

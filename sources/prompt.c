@@ -1,5 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "../include/conditionals.h"
+#include "../include/doge_code.h"
+
+
+
 
 
 #include <editline/readline.h>
@@ -10,7 +15,7 @@
 
 int main(int argc, char** argv) {
 
-
+  doge();
   puts("ZennityLang 0.0.0.0.1");
   puts("Pressione Ctrl+c para Sair\n");
 

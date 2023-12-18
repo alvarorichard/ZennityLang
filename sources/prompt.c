@@ -15,7 +15,7 @@
 
 int main(int argc, char** argv) {
 
-  doge();
+   doge();
   puts("ZennityLang 0.0.0.0.1");
   puts("Pressione Ctrl+c para Sair\n");
 

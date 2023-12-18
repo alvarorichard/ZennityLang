@@ -6,7 +6,7 @@ target("your_app_name")
     -- Add the source files
     -- If you have multiple source files, list them all separated by spaces,
     -- or use add_files("src/*.c") to include all .c files in the src directory
-    add_files("your_program.c")
+    --add_files("your_program.c")
 
     -- Add dependencies, if you're using 'editline'
     add_packages("libedit")

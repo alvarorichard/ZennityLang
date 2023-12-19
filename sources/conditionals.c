@@ -1,5 +1,3 @@
-
-
 #include "../include/mpc.h"
 #include "../include/conditionals.h"
 #include <stdio.h>
@@ -27,12 +25,20 @@ void add_history(char* unused) {}
 
 /* Forward Declarations */
 
+/*
+TODO: Remove this repeated declaration of Forward
+this values already declared in `conditionals.h`
 struct lval;
 struct lenv;
 typedef struct lval lval;
 typedef struct lenv lenv;
+*/
 
 /* Lisp Value */
+
+/*
+TODO: Remove this repeated declaration of Lisp Values
+this values already declared in `conditionals.h`
 
 enum { LVAL_ERR, LVAL_NUM, LVAL_SYM, LVAL_FUN, LVAL_SEXPR, LVAL_QEXPR };
 
@@ -41,22 +47,23 @@ typedef lval*(*lbuiltin)(lenv*, lval*);
 struct lval {
   int type;
 
-  /* Basic */
+  // Basic
   long num;
   char* err;
   char* sym;
   
-  /* Function */
+  // Function
   lbuiltin builtin;
   lenv* env;
   lval* formals;
   lval* body;
   
-  /* Expression */
+  // Expression
   int count;
   lval** cell;
 };
 
+*/
 lval* lval_num(long x) {
   lval* v = malloc(sizeof(lval));
   v->type = LVAL_NUM;

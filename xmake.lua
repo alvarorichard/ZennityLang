@@ -1,12 +1,26 @@
--- Define a target for your application
-target("your_app_name")
-    -- Set the kind of target, 'binary' for executable
+toolchain("ZennityLang_Toolchain")
+    set_kind("standalone")
+
+    set_toolset("cc", "clang")
+    set_toolset("cxx", "clang++", "clang")
+    set_toolset("ld", "clang", "clang++")
+toolchain_end()
+
+target("ZennityLang")
+    set_targetdir("build")
+    set_filename("prompt")
+
     set_kind("binary")
 
-    -- Add the source files
-    -- If you have multiple source files, list them all separated by spaces,
-    -- or use add_files("src/*.c") to include all .c files in the src directory
-    --add_files("your_program.c")
+    -- TODO: In future, is better using globbing instead file to file
+    add_includedirs("include")
+
+    add_files("sources/conditionals.c")
+    add_files("sources/doge_code.c")
+    add_files("sources/mpc.c")
+    add_files("sources/prompt.c")
+
+    set_optimize("fastest")
 
     -- Add dependencies, if you're using 'editline'
     add_packages("libedit")
@@ -15,7 +29,7 @@ target("your_app_name")
     set_languages("c99")
 
     -- Add any necessary compile flags, if specific flags are needed
-    -- add_cflags("-Wall", "-Wextra", "-O2")
+    add_cflags("-Wall", "-g")
 
     -- Add link flags if there are any specific requirements
-    -- add_ldflags("-ledit", {force = true})
+    add_links("edit", "m")

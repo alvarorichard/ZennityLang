@@ -2,3 +2,11 @@
 *.out
 *.exe
 *.o
+
+# Diretórios de cache do xmake
+.xmake/linux/x86_64/cache
+.xmake/ui.log
+.xmake/linux/x86_64/tmp
+
+# Diretório de saida do xmake
+build

@@ -10,3 +10,6 @@
 
 # Diretório de saida do xmake
 build
+
+# arquivo do vscode
+.vscode/settings.json

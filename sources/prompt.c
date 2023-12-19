@@ -5,8 +5,6 @@
 
 
 
-
-
 #include <editline/readline.h>
 
 // se vc usa arch linux ou macOS , remova a linha abaixo com a biblioteca editline/history.h
@@ -16,6 +14,7 @@
 int main(int argc, char** argv) {
 
    doge();
+   conditionals();
   puts("ZennityLang 0.0.0.0.1");
   puts("Pressione Ctrl+c para Sair\n");
 

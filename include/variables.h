@@ -18,20 +18,26 @@ typedef struct lenv lenv;
 
 /* Lisp Value */
 
-enum { LVAL_ERR, LVAL_NUM, LVAL_SYM,
-       LVAL_FUN, LVAL_SEXPR, LVAL_QEXPR };
+// enum { LVAL_ERR, LVAL_NUM, LVAL_SYM,
+//   LVAL_FUN, LVAL_SEXPR, LVAL_QEXPR }
 
-typedef lval*(*lbuiltin)(lenv*, lval*);
+// typedef lval*(*lbuiltin)(lenv*, lval*);
 
-struct lval {
-  int type;
-  long num;
-  char* err;
-  char* sym;
-  lbuiltin fun;
-  int count;
-  lval** cell;
-};
+// enum { LVAL_ERR, LVAL_NUM, LVAL_SYM,
+//   LVAL_FUN, LVAL_SEXPR, LVAL_QEXPR };  // Added semicolon here
+
+//typedef lval*(*lbuiltin)(lenv*, lval*);
+
+
+// struct lval {
+//   int type;
+//   long num;
+//   char* err;
+//   char* sym;
+//   lbuiltin fun;
+//   int count;
+//   lval** cell;
+// };
 
 lval* lval_num(long x);
 lval* lval_err(char* fmt, ...);
@@ -97,4 +103,4 @@ lval* lval_read(mpc_ast_t* t);
 
 int var();
 
-#endif /* ZENNITYLANG_H */
+#endif /* VARIABLES_H */

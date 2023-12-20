@@ -14,7 +14,8 @@ target("ZennityLang")
 
     -- TODO: In future, is better using globbing instead file to file
     add_includedirs("include")
-
+     
+    add_files("sources/variables.c")
     add_files("sources/conditionals.c")
     add_files("sources/doge_code.c")
     add_files("sources/mpc.c")

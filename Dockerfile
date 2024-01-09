@@ -21,8 +21,7 @@ WORKDIR /workspace
 # Copy your C source code into the Docker image
 COPY . /workspace
 
-# Compile the code (replace `your_program.c` with the actual file name)
-# You can switch between gcc and clang by changing the compiler command
+
 RUN gcc -o your_program your_program.c -ledit -lm
 # Or using Clang:
 # RUN clang -o your_program your_program.c -ledit -lm

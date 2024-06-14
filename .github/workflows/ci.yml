@@ -1,0 +1,28 @@
+name: Build and Test
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install Clang
+      run: sudo apt-get install -y clang
+
+    - name: Install Xmake
+      run: |
+        curl -fsSL https://xmake.io/shget.text | bash
+        echo 'export PATH=$HOME/.xmake/repositories/xmake/repo/packages/x/xmake/xmake/core/xdemo/cli/cli/xmake:$PATH' >> $GITHUB_ENV
+
+    - name: Configure xmake
+      run: ~/.xmake/repositories/xmake/repo/packages/x/xmake/xmake/core/xdemo/cli/cli/xmake f -c --toolchain=ZennityLang_Toolchain
+
+    - name: Build project
+      run: ~/.xmake/repositories/xmake/repo/packages/x/xmake/xmake/core/xdemo/cli/cli/xmake
+
+    - name: Run tests
+      run: ./build/prompt
